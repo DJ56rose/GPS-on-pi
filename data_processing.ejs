@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Your Path</title>
+	<script language="javascript">
+		function runGPS() {
+			alert('GPS starting');
+			window.location.href="http://10.255.188.104:8080/reqStart";
+		}
+		function stopGPS() {
+			alert('GPS stopping');
+			window.location.href="http://10.255.188.104:8080/reqStop";
+		}
+		function saveCurrentData() {
+			window.location.href="http://10.255.188.104:8080/saveData";
+		}
+		function stats() {
+			window.location.href="http://10.255.188.104:8080/stats";
+		}
+	</script>
+	</head>
+	<body>
+		<h1>Look at Your Data</h1>
+		<h2>Most Recent Data Files:</h2>
+		<p><a href="GPS_data.txt">Current GPS data</a></p>
+		<p><a href="System_data.txt">Current System data</a></p>
+		<p><input type="button" onclick="saveCurrentData()" value="Save data"/></p>
+		<p>
+		<input type="button" onclick="runGPS()" value="Start GPS"/>
+		<input type="button" onclick="stopGPS()" value="Stop GPS"/>
+		</p>
+		<h2>Data Statistics:</h2>
+		<p>Saved files</p>
+		<form method="post">
+			<select name="saved data" size="5">
+		</form>
+		<p>
+		<input type="button" onclick="stats()" value="Get Stats"/>
+		</p>
+	</body>
+</html>

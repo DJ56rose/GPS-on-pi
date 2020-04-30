@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Your Route!</title>
+	<script>
+		function back() {
+			window.location.href="http://10.255.188.104:8080/processing"
+		}
+	</script>
+	</head>
+	<body>
+		<h1>Your most recent route:</h1>
+		<p>If the most recent data doesn't show up navigate</p>
+		<p>back and wait a few seconds before returning</p>
+		<h3>
+			Distance: 
+			<object data="total_distance.txt" type="text/plain" width="120" style="height: 20px">
+				<a href="total_distance.txt">Not Supported</a>
+			</object> km
+		</h3>
+		<h3>
+		Elevation gain:
+		<object data="elevation_gain.txt" type="text/plain" width="120" style="height: 20px">
+			<a href="elevation_gain.txt">Not Supported</a>
+		</object> m
+		</h3>
+		<p></p>
+		<h3>Elevation heatmap:</h3>
+		<img src="elevation_heatmap.png" alt="elevation heat map">
+		<p></p>
+		<h3>Elevation plot:</h3>
+		<img src="elevation.png" alt="elevation plot">
+		<p></p>
+		<h3>Average speed heatmap:</h3>
+		<img src="speed_heatmap.png" alt="average speed heatmap">
+		<p></p>
+		<h3>Average speed plot:</h3>
+		<img src="speed.png" alt="average speed plot">
+		<p></p>
+		<input type="button" onclick="back()" value="Back">
+	</body>
+</html>
